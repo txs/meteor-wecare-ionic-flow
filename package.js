@@ -1,6 +1,6 @@
 Package.describe({
-  name: "meteoric:ionic",
-  summary: "Ionic components for Meteor. No Angular!",
+  name: "wecare:ionic-flow",
+  summary: "Ionic components for Meteor. No Angular! It flows~",
   version: "0.1.18",
   git: "https://github.com/meteoric/meteor-ionic.git"
 });
@@ -11,7 +11,7 @@ Cordova.depends({
 
 Package.onUse(function(api) {
   api.versionsFrom("1.0");
-  api.use(["templating", "underscore", "fastclick", "meteorhacks:flow-router@1.9.0", "tracker", "session"], "client");
+  api.use(["templating", "underscore", "fastclick", "meteorhacks:flow-router@1.9.0", "arillo:flow-router-helpers", "tracker", "session"], "client");
 
   api.addFiles([
     "vendor/snap.js",

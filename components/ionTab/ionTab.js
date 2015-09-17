@@ -27,11 +27,12 @@ Template.ionTab.helpers({
       return this.href;
     }
     
-    var routeExists =_.reject(FlowRouter._routes, function(route) {
-      return route.path === this.path;
-    });
+    // var routeExists =_.reject(FlowRouter._routes, function(route) {
+    //   return route.path === this.path;
+    // });
     // TODO: fix this syntax
-    if (this.path && routeExists.length) {
+    // if (this.path && routeExists.length) {
+    if (this.path) {
       return this.path;
     }
   },
@@ -46,10 +47,16 @@ Template.ionTab.helpers({
     // The initial case where there is no localStorage value and
     // no session variable has been set, this attempts to set the correct tab
     // to active based on the router
-    FlowRouter.watchPathChange();
-    var route = FlowRouter.current();
-    if(route && route.path === this.path){
-      return 'active';
+    // Only runs when the page first load! without user interaction. else control with session.
+    if(ionTabCurrent=== undefined){
+      var path = this.path;
+      setTimeout(function(){
+          FlowRouter.watchPathChange();
+          var route = FlowRouter.current();
+          if(route && route.path === path ){
+            Session.set('ionTab.current', path);
+          }
+      }, 0);  
     }
   },
 
