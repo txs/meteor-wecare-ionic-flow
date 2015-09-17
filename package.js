@@ -2,6 +2,7 @@ Package.describe({
   name: "wecare:ionic-flow",
   summary: "Ionic components for Meteor. No Angular! It flows~",
   version: "0.1.18",
+  documentation: 'README.md',
   git: "https://github.com/txs/meteor-wecare-ionic-flow.git"
 });
 
