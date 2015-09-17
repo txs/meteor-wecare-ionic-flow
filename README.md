@@ -98,3 +98,7 @@ You can also keep track of the various other repos from the [Meteoric team](http
 
 ## License
 [MIT License](https://github.com/meteoric/meteor-ionic/blob/master/LICENSE)
+
+## Changelog
+- Tab path url fix
+- Tab isActive fix when the Route init loads
