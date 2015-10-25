@@ -99,24 +99,24 @@ Template.ionNavBar.destroyed = function () {
 };
 
 Template.ionNavBar.helpers({
-  headerButtonLeft: function () {
-    var parentFunction = Template.parentData(1).headerButtonLeft
-    if (parentFunction) {
-      return parentFunction()
-    }
-  },
-  headerTitle: function () {
-    var parentFunction = Template.parentData(1).headerTitle
-    if (parentFunction) {
-      return parentFunction()
-    }
-  },
-  headerButtonRight: function () {
-    var parentFunction = Template.parentData(1).headerButtonRight
-    if (parentFunction) {
-      return parentFunction()
-    }
-  },
+  // headerButtonLeft: function () {
+  //   var parentFunction = Template.parentData(1).headerButtonLeft
+  //   if (parentFunction) {
+  //     return parentFunction()
+  //   }
+  // },
+  // headerTitle: function () {
+  //   var parentFunction = Template.parentData(1).headerTitle
+  //   if (parentFunction) {
+  //     return parentFunction()
+  //   }
+  // },
+  // headerButtonRight: function () {
+  //   var parentFunction = Template.parentData(1).headerButtonRight
+  //   if (parentFunction) {
+  //     return parentFunction()
+  //   }
+  // },
   classes: function () {
     var classes = ['bar', 'bar-header'];
 
