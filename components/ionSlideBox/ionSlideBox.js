@@ -1,10 +1,12 @@
 Template.ionSlideBox.created = function () {
-  this.data = this.data || {};
-  this.doesContinue = this.data.doesContinue || false;
-  this.autoPlay = this.data.autoPlay || false;
-  this.slideInterval = this.data.slideInterval || 4000;
-  this.showPager = typeof this.data.showPager != 'undefined' ? this.data.showPager : true;
-  this.initialSlide = this.data.initialSlide || Session.get('ion-slide-initial-slide') || 0;
+  this.data           = this.data || {};
+  this.doesContinue   = this.data.doesContinue || false;
+  this.autoPlay       = this.data.autoPlay || false;
+  this.slideInterval  = this.data.slideInterval || 4000;
+  this.showPager      = typeof this.data.showPager != 'undefined' ? this.data.showPager : true;
+  this.initialSlide   = this.data.initialSlide || Session.get('ion-slide-initial-slide') || 0;
+  // this.adaptiveHeight = eval(this.data.adaptiveHeight) || false;
+  // console.log(this.adaptiveHeight== true);
 };
 
 Template.ionSlideBox.rendered = function () {
@@ -16,6 +18,7 @@ Template.ionSlideBox.rendered = function () {
     dots: this.showPager,
     dotsClass: 'slider-pager',
     initialSlide: this.initialSlide,
+    // adaptiveHeight: this.adaptiveHeight,
     customPaging: function(slider, i) {
       return '<span class="slider-pager-page icon ion-record"></span>';
     }

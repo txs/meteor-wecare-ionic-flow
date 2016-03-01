@@ -2,6 +2,10 @@
 
 # meteor-ionic
 
+## This package let's you have ionic work with Meteor and the FlowRouter
+It has extra features such as
+* Adjustive Slidebox 
+
 ### Build [Ionic](http://ionicframework.com/) apps in [Meteor](https://www.meteor.com/)!
 
 This is an attempt at **real Ionic and Meteor integration**. This is not just Ionic's CSS framework wrapped in a Meteor package. It aims to be a complete port of [Ionic’s Angular directives](http://ionicframework.com/docs/api/) to [Meteor Blaze](https://www.meteor.com/blaze) templates.
