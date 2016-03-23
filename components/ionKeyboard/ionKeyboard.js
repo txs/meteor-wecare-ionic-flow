@@ -48,6 +48,14 @@ window.addEventListener('native.keyboardshow', function (event) {
     return;
   }
 
+  // Verify if the keyboard is not already open.
+  // When keyboard's arrows are used to move between fields in iOS 9 then
+  // 'native.keyboardshow' is fired without a previous 'native.keyboardhide'
+  // causing this issue: https://github.com/meteoric/meteor-ionic/issues/321.
+  if ($('body').hasClass('keyboard-open')) {
+    return;
+  }
+
   $('body').addClass('keyboard-open');
   var keyboardHeight = event.keyboardHeight;
 
